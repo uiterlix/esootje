@@ -1,0 +1,45 @@
+-runfw: org.apache.felix.framework;version=4
+-runee: JavaSE-1.8
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active;skip:="osgi.service"
+
+-runbundles: \
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell,\
+	org.apache.felix.gogo.command,\
+	org.apache.felix.dependencymanager;version=4.3.0,\
+	org.apache.felix.metatype;version=1.0.12,\
+	org.apache.felix.configadmin;version=1.8.6,\
+	org.apache.felix.eventadmin;version=1.3.2,\
+	nl.esootje.core;version=latest,\
+	slf4j.api;version=1.7.21,\
+	slf4j.simple;version=1.7.21,\
+	org.mongodb.mongo-java-driver;version=2.13,\
+	org.mongojack;version=2.1,\
+	com.fasterxml.jackson.core.jackson-annotations;version=2.6,\
+	com.fasterxml.jackson.core.jackson-core;version=2.6,\
+	com.fasterxml.jackson.core.jackson-databind;version=2.6,\
+	de.undercouch.bson4jackson;version=2.3,\
+	javax.persistence;version=2.1.0,\
+	org.amdatu.mongo;version=1.2,\
+	org.apache.felix.http.api;version=3.0.0,\
+	org.apache.felix.http.jetty;version=3.2.0,\
+	org.apache.felix.http.servlet-api;version=1.1.2,\
+	org.apache.felix.http.whiteboard;version=3.0.0,\
+	org.amdatu.web.rest.jaxrs;version=1.1,\
+	org.amdatu.web.rest.wink;version=3.0.0,\
+	com.fasterxml.jackson.jaxrs.jackson-jaxrs-base;version=2.6.3,\
+	com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider;version=2.6.3,\
+	org.apache.felix.dependencymanager.shell,\
+	org.amdatu.configurator.api;version=1.0.1,\
+	org.amdatu.configurator.autoconf;version=1.0.1,\
+	org.amdatu.configurator.properties;version=1.0.1,\
+	org.amdatu.configurator.shell;version=1.0.1,\
+	org.amdatu.web.filters;version=1.0.0,\
+	org.amdatu.web.filters.cors;version=1.0.0,\
+	net.luminis.cmc;version=0.4.0
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)'

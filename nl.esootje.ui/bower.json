@@ -1,0 +1,44 @@
+{
+    "name": "Esootje",
+    "description": "Esootje word tutor.",
+    "version": "0.0.0",
+    "homepage": "https://www.esootje.net",
+    "private": true,
+    "dependencies": {
+        "angular": "1.4.x",
+        "angular-mocks": "1.4.x",
+        "jquery": "~2.1.1",
+        "bootstrap": "~3.1.1",
+        "angular-recursion": "1.0.5",
+        "angular-bootstrap": "0.14.3",
+        "angular-ui-router": "0.2.15",
+        "requirejs": "2.1.20",
+        "requirejs-plugins": "1.0.3",
+        "requirejs-dplugins": "0.5.2",
+        "requirejs-text": "2.0.14"
+    },
+    "overrides": {
+        "requirejs-plugins": {
+            "main": "src/async.js"
+        },
+        "requirejs-dplugins": {
+            "main": "*.js"
+        },
+        "angular-bootstrap": {
+            "main": [
+                "ui-bootstrap.js",
+                "ui-bootstrap-tpls.js"
+            ]
+        },
+        "angular-tree-control": {
+            "main": [
+                "angular-tree-control.js",
+                "css/*",
+                "images/*"
+            ]
+        },
+        "angular-file-upload": {
+            "main": "dist/angular-file-upload.js"
+        }
+    }
+}
